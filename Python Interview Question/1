@@ -1,0 +1,66 @@
+List vs Tuple
+
+1. Mutability
+   - Lists are mutable, meaning you can modify, add, or remove elements after creation.  
+   - Tuples are immutable, meaning their elements cannot be changed once defined. 
+
+List (Mutable)
+my_list = [1, 2, 3]
+my_list.append(4)  # Adding element
+my_list[0] = 10  # Modifying element
+print("List:", my_list)  # Output: [10, 2, 3, 4]
+
+Tuple (Immutable)
+my_tuple = (1, 2, 3)
+// my_tuple[0] = 10 // ❌ This will raise an error
+print("Tuple:", my_tuple)  # Output: (1, 2, 3)
+
+
+2. Performance
+   - Tuples are faster than lists since they don’t require extra memory for modifications.  
+   - Lists consume more memory because they need space for dynamic resizing.  
+
+import timeit
+
+list_time = timeit.timeit(stmt="[1, 2, 3, 4, 5]", number=1000000)
+tuple_time = timeit.timeit(stmt="(1, 2, 3, 4, 5)", number=1000000)
+
+print("List Creation Time:", list_time)
+print("Tuple Creation Time:", tuple_time)
+
+
+3. Syntax
+   - Lists are created using square brackets: `my_list = [1, 2, 3]`  
+   - Tuples are created using parentheses: `my_tuple = (1, 2, 3)`  
+
+import sys
+
+list_size = sys.getsizeof([1, 2, 3, 4, 5])
+tuple_size = sys.getsizeof((1, 2, 3, 4, 5))
+
+print("List Size:", list_size, "bytes")
+print("Tuple Size:", tuple_size, "bytes")
+
+
+4. Methods
+   - Lists have more built-in methods like `append()`, `remove()`, `sort()`, and `extend()`.  
+   - Tuples have only a few methods, mainly `count()` and `index()`.  
+
+5. Usage
+   - Use a list when you need a collection that can be modified.  
+   - Use a tuple when you want to store fixed data that should not change.  
+
+6. Hashability
+   - Tuples can be used as dictionary keys if they contain only immutable elements.  
+   - Lists cannot be used as dictionary keys because they are mutable.  
+
+7. Iteration Speed 
+   - Iterating over a tuple is generally faster than iterating over a list due to its fixed size.  
+
+
+// Tuples can be used as dictionary keys
+my_dict = { (1, 2): "Tuple Key" }
+print(my_dict[(1, 2)])  # ✅ Works fine
+
+// Lists cannot be used as dictionary keys
+// my_dict = { [1, 2]: "List Key" }  # ❌ Raises TypeError
