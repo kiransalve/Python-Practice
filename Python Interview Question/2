@@ -1,38 +1,23 @@
-27. Remove Element
+What is a decorator in Python?
 
-Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The order of the elements may be changed. Then return the number of elements in nums which are not equal to val.
+A decorator is a function that takes another function as an argument and 
+extends or modifies its behavior without modifying its actual code.
 
-Consider the number of elements in nums which are not equal to val be k, to get accepted, you need to do the following things:
+def my_decorator(func):
+    def wrapper():
+        print("Something is happening before the function is called.")
+        func()
+        print("Something is happening after the function is called.")
+    return wrapper
 
-Change the array nums such that the first k elements of nums contain the elements which are not equal to val. The remaining elements of nums are not important as well as the size of nums.
-Return k.
+@my_decorator
+def say_hello():
+    print("Hello!")
 
-Example 1:
-
-Input: nums = [3,2,2,3], val = 3
-Output: 2, nums = [2,2,_,_]
-Explanation: Your function should return k = 2, with the first two elements of nums being 2.
-It does not matter what you leave beyond the returned k (hence they are underscores).
-
-
-
-class Solution:
-    def removeElement(self, nums: List[int], val: int) -> int:
-        j = 0
-        for i in range(len(nums)):
-            if nums[i] != val:
-                nums[j] = nums[i]
-                j += 1
-        return j
+say_hello()
 
 
-1. Given `nums = [3, 2, 2, 3]` and `val = 3`.  
-2. Initialize `j = 0`. (This keeps track of the position for valid numbers.)  
-3. Iterate through each `nums[i]`:  
-
-   - nums[0]  = 3 → This is `val`, so skip it (do not store it).  
-   - nums[1] = 2 → This is not `val`, store it at `nums[0]`, and increase `j` by 1
-   - nums[2] = 2 → This is not `val`, store it at `nums[1]`, and increase `j` by 1  
-   - nums[3] = 3 → This is `val`, so skip it.  
-
-4. The new length = 2, meaning `nums[:2] = [2, 2]`.
+Output 
+Something is happening before the function is called.
+Hello!
+Something is happening after the function is called.
