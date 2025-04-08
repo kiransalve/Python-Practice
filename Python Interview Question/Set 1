@@ -1,0 +1,55 @@
+18:43 - Explain Ternary Operator in Python?
+19:42 - What is Inheritance In Python
+01:40 - Difference Between List and Tuple
+03:19 - What is Decorator? Explain it with example.
+06:41 - Difference Between List Comprehension and Dict Comprehension
+08:12 - How is Memory Managed In Python?
+09:38 - Difference Between Generators and Iterators
+11:18 - What is 'init' keyword in python?
+13:01 - Difference Between Modules and Packages in Python
+14:28 - Difference Between Range and Xrange?
+16:21 - What are Generators. Explain it with example.
+16:48 - What are inbuild data types available in Python -OR Explain Mutable and Immutable data Types
+
+21:46 - Difference Between Local Variable and Global Variable in Python
+23:31 - Explain Break, Continue and Pass Statement
+25:51 - What is 'self' keyword in python?
+27:27 - Difference Between Pickling and Unpickling?
+28:38 - Explain Function of List, Set, Tuple or Dictionary?
+31:09 - What are Python Iterators?
+31:32 - Explain type conversion in python. (int(), float(), ord(), oct(), str(), hex(), eval() etc.)
+34:14 - What does *args and **kwargs mean? expain
+36:45 - What is "Open" and "With" statement in python?
+38:41 - Different ways to read and write in a file in python?
+40:35 - What is Pythonpath?
+41:15 - How exception handled in Python. [Try, Except, Else And Finally Block]
+43:28 - Difference Between Python 2.0 & Python 3.0
+44:52 - What is PIP in python
+45:46 - Where is Python used?
+46:11 - How to use F string and format or replacement operator in Python?
+47:36 - How to get list of all keys in a dictionary?
+49:18 - Difference Between Abstration and Encapsulation.
+
+
+50:12 - Does Python support multiple inheritence. (Diamond Problem)
+52:12 - How to initialize empty List, Tuple, Dict or Set?
+53:11 - What are .py and .pyc files in Python
+54:08 - How slicing works in string manupulation. Explain [::-1]
+59:34 - Can you concatenate two tuples? How is it even possible to concatenate two tuples, since Tuple is Immutable data type.
+01:04:21 - Difference Between Python Arrays and Lists
+01:05:25 - Difference Between a, __a, __a_ in python?
+01:07:07 - How to read multiple value from single input? --- By Split()
+01:08:14 - How to copy and delete a dictionary
+01:11:12 - Difference Between Anonymous and Lambda function
+
+01:14:04 - How to achieve Multiprocessing and Multithreading in python?
+01:15:52 - What is GIL. Explain
+01:17:01 - How class and object created in python?
+01:17:54 - Explain Namespace and its types in python
+01:20:01 - Explain Recursion by Reversing a list.
+01:21:13 - What are Unittests in Python
+01:22:28 - How to use Map, filter and reduce functions in python?
+01:23:16 - Difference Between Shallow copy and deep copy
+01:24:28 - How an object be copied in python
+01:24:28 - What does term MONKEY PATCHING refer to in python?
+01:25:04 - What is operator overloading & Dunder Method.
