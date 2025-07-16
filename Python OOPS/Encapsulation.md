@@ -26,5 +26,5 @@ and if other want to crash your softwere by using it, it is enmity of two human,
 
 also python not completely hide because in future if you need to ulter the variable, then you can.
 
-
+We make two functions - get() and set() to get and ulter the private variable but with our own custom logic.
 
