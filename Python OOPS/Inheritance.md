@@ -26,3 +26,9 @@ tommy.bark()    # Output: The dog barks.
 
 ```
 
+Key 
+
+1. Child can take the data and methods from parents but parents can not take from child
+2. Child can inherite - Data members, methods, constructor
+3. Child can not inheritate the private variable and methods
+   
