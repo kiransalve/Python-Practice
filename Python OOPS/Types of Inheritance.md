@@ -1,4 +1,5 @@
 ```text
+
 # 🧠 Types of Inheritance in Python
 
 ---
