@@ -2,6 +2,7 @@ A collection of objects refers to a group (or container) that stores multiple in
 
 Let’s say you have a Student class and want to store many students in one place — like a list or dictionary.
 
+```text
 class Student:
     def __init__(self, name, marks):
         self.name = name
@@ -35,7 +36,7 @@ Bob: 90
 
 Charlie: 78
 
-
+```
 
 | Type    | Description                         | Example                  |
 | ------- | ----------------------------------- | ------------------------ |
