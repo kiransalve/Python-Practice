@@ -239,7 +239,7 @@ When you want to reuse parent constructor logic.
 In multiple inheritance, it follows MRO (Method Resolution Order) to ensure correct method calls
 
 
-Use Cases
+Use Cases 1
 
 ```text
 
@@ -274,3 +274,28 @@ then parents contructor saved these
 then child class save os and ram which is smartphone specific 
 
 
+Use Case 2
+
+```text
+
+class Parent:
+    def __init__(self, num):
+        self.__num = num
+
+    def get_num(self):
+        return self.__num
+    
+class Child(Parent):
+    def __init__(self, num, val):
+        super().__init__(num)
+        self.__val=val
+    
+    def get_val(self):
+        return self.__val
+    
+son = Child(100, 200)
+
+print(son.get_val())
+print(son.get_num())
+
+```
