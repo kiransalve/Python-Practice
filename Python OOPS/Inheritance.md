@@ -142,3 +142,93 @@ obj1 = B() → B has no __init__, so Python automatically calls A’s __init__, 
 
 When you call obj1.display1(200), the method receives var1=200 as a parameter, but it never uses it
 
+Scenario 5
+
+call parent class methods or constructor from a child class
+
+super() is used to call parent class methods or constructor from a child class — especially useful in inheritance.
+
+1 Calling Parent Constructor in Child Class
+
+```text
+
+
+class A:
+    def __init__(self):
+        print("Constructor of A")
+
+class B(A):
+    def __init__(self):
+        super().__init__()  # calls A's constructor
+        print("Constructor of B")
+
+obj = B()
+
+Output
+
+Constructor of A  
+
+Constructor of B
+
+```
+2 Calling Parent Method
+ 
+```text
+
+class A:
+    def show(self):
+        print("A's show")
+
+class B(A):
+    def show(self):
+        super().show()  # calls A's show
+        print("B's show")
+
+obj = B()
+obj.show()
+
+Output
+
+A's show  
+
+B's show
+
+```
+
+3 In Multiple Inheritance (MRO)
+
+```text
+class A:
+    def __init__(self):
+        print("A")
+
+class B(A):
+    def __init__(self):
+        super().__init__()
+        print("B")
+
+class C(B):
+    def __init__(self):
+        super().__init__()
+        print("C")
+
+obj = C()
+
+Output
+
+A  
+
+B  
+
+C
+
+```
+
+When to Use super()?
+
+When extending functionality of the parent method.
+
+When you want to reuse parent constructor logic.
+
+In multiple inheritance, it follows MRO (Method Resolution Order) to ensure correct method calls
+
