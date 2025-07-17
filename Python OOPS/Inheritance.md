@@ -299,3 +299,50 @@ print(son.get_val())
 print(son.get_num())
 
 ```
+
+Use Case 3
+
+```text
+
+class Parent:
+    def __init__(self):
+        self.num = 100
+
+class Child(Parent):
+    def __init__(self):
+        super().__init__()
+        self.var = 200
+    def show(self):
+        print(self.num)
+        print(self.var)
+
+son= Child()
+son.show()
+
+```
+
+When a Parent object is created, it sets num = 100.
+
+Child is inheriting from Parent.
+
+Inside Child's constructor (__init__), super().__init__() is used to call the Parent constructor.
+
+So, self.num = 100 is executed from the parent.
+
+Then self.var = 200 is set.
+
+show() function prints both values: num from parent and var from child.
+
+A new object son of class Child is created:
+
+It runs the Child constructor.
+
+super().__init__() runs Parent constructor → sets self.num = 100.
+
+Then self.var = 200 is set.
+
+Then son.show() prints:
+
+100
+200
+
