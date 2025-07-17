@@ -6,7 +6,7 @@ In simple words:
 
 Grandparent → Parent → Child
 
-``text
+```text
 class Grandparent:
     def show_grandparent(self):
         print("I am Grandparent")
@@ -25,18 +25,7 @@ obj.show_grandparent()  # from Grandparent
 obj.show_parent()       # from Parent
 obj.show_child()        # from Child
 
-```
 
-```
-Grandparent
-     ↓
-   Parent
-     ↓
-   Child
-
-```
-
-```
 
 +------------------+
 |   Grandparent    |
