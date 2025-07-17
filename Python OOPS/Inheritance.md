@@ -33,7 +33,7 @@ Key
 3. Child can not inheritate the private variable and methods
    
 
-Conditions
+Scenario - 1
 
 If child class have not any constructor then when we create object, the parents class constructor will be called
 
@@ -54,4 +54,37 @@ Output
 Parent class constructor called
 
 ```
+
+
+Scenario - 2
+
+If both the parent and child class have a method with the same name, then the child's method overrides the parent's method. This is called Method Overriding in OOP.
+
+```text
+
+class Parent:
+    def show(self):
+        print("This is Parent method")
+
+class Child(Parent):
+    def show(self):
+        print("This is Child method")
+
+# Create object of child class
+c = Child()
+c.show()
+
+Output
+
+This is Child method
+```
+
+Even though Child inherits from Parent, when you call c.show(), it will use the Child's version of show() method.
+
+This is polymorphism: same method name, different behavior.
+
+suppose my father has family business, but I choose softwere developer as career
+
+my father choose there career as business but I have freedom to choose father's business but I will choose mine
+
 
