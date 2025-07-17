@@ -1,12 +1,14 @@
 Constructor in Python is a special function that runs automatically when you create an object of a class.
 
+```text
 class Dog:
     def __init__(self):
         print("A dog is born!")
 
-# Creating object
+Creating object
 d = Dog()          # This will print: A dog is born!
 
+```
 __init__ is dunder methods that are predefined in python
 
 It is method that object can't call, it called automatically at certain criteria
