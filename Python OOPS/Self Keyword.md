@@ -40,8 +40,4 @@ agar sbi aur hdfc do object hai, un dono ka data alag hoga
 
 sbi, hdfc ka data access nahi kar sakta, kyonki sbi object ka data access karne ka authority sirf sbi ke pass hai dusre ke pass nahi
 
-eise bahot se scenario aayenge jaha ek method ko dusre method me call karna padega, uske liye hame object lagega us class ka
-
-object kaha se aayega, self ke throgh
-
 self is basically current object
