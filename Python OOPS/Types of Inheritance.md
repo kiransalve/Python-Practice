@@ -1,8 +1,10 @@
+```text
 # 🧠 Types of Inheritance in Python
 
 ---
 
 ## 1. 🟦 Single Inheritance  
+
 > One child class inherits from one parent class.
 
 
@@ -124,3 +126,4 @@ class Intermediate(Parent1, Parent2):
 
 class Child(Intermediate):
     pass
+```
