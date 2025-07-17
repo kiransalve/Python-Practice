@@ -142,11 +142,15 @@ obj1 = B() → B has no __init__, so Python automatically calls A’s __init__, 
 
 When you call obj1.display1(200), the method receives var1=200 as a parameter, but it never uses it
 
+
+
 Scenario 5
 
 call parent class methods or constructor from a child class
 
 super() is used to call parent class methods or constructor from a child class — especially useful in inheritance.
+
+super() should be first statement of function always.
 
 1 Calling Parent Constructor in Child Class
 
@@ -233,4 +237,40 @@ When extending functionality of the parent method.
 When you want to reuse parent constructor logic.
 
 In multiple inheritance, it follows MRO (Method Resolution Order) to ensure correct method calls
+
+
+Use Cases
+
+```text
+
+class Phone:
+    def __init__(self, price, brand, camera):
+        print("Step 2 - Inside Phone contructor")
+        self.price=price
+        self.brand=brand 
+        self.camera=camera
+
+class Smartphone(Phone):
+    def __init__(self,price, brand, camera, os, ram):
+        print("Step 1 - Smartphone contructor")
+        super().__init__(price,brand,camera)
+        self.os = os
+        self.ram = ram
+        print("Step 3 - Inside Smartphone contructor with updated os and ram")
+
+s = Smartphone(2000, "Samsumg", 12, "Android",2)
+print(s.os,s.ram,s.camera,s.price)
+
+```
+
+first s is object created with price, brand, camera, os and ram
+
+child class has its own contructor, so it will run first
+
+using super() we called parents contructor and send price, brand and camera, becasue these are common features of phones
+
+then parents contructor saved these
+
+then child class save os and ram which is smartphone specific 
+
 
