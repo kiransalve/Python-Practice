@@ -111,3 +111,34 @@ Child Constructor
 
 ```
 
+Scenario 4
+
+parameter vs instance variable” situation
+
+```text
+
+class A:
+    def __init__(self):
+        self.var1 = 100
+
+    def display1(self, var1):
+        print("Class A : ", self.var1)
+
+class B(A):
+    def display2(self, var1):
+        print("Class B : ", self.var1)
+
+obj1 = B()
+obj1.display1(200)
+
+Output:
+
+Class A :  100
+```
+
+Why 100 (not 200)?
+
+obj1 = B() → B has no __init__, so Python automatically calls A’s __init__, setting self.var1 = 100.
+
+When you call obj1.display1(200), the method receives var1=200 as a parameter, but it never uses it
+
