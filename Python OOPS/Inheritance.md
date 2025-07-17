@@ -351,3 +351,5 @@ Here is key concept that inside child we can get parents attributes
 outside of class we call it like - son.var and inside of class we call it like - self.var
 
 because son and self are same here
+
+jaise gangadhar hi shaktiman hai vaise - son hi self hai
