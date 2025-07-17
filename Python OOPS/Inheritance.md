@@ -88,3 +88,26 @@ suppose my father has family business, but I choose softwere developer as career
 my father choose there career as business but I have freedom to choose father's business but I will choose mine
 
 
+Scenario 3
+
+If both the parent and child class have their own constructor (__init__), then only the child's constructor is called when creating an object of the child class.
+
+```text
+
+class Parent:
+    def __init__(self):
+        print("Parent Constructor")
+
+class Child(Parent):
+    def __init__(self):
+        print("Child Constructor")
+
+# Create object of Child class
+c = Child()
+
+Output:
+
+Child Constructor
+
+```
+
