@@ -1,11 +1,12 @@
 It means restricting direct access of data (variables) and methods (functions) to some of the object's components data
 
 example 
-
+```text
 class ATM:
   def __init__(self):
       self.__balance = balance
 
+```
 when we add "__" (double under score) to variable or method name, it is not accessible to object
 
 internally python store it as
