@@ -195,6 +195,8 @@ B's show
 
 ```
 
+We call super() only inside child class, cant call outside of class
+
 3 In Multiple Inheritance (MRO)
 
 ```text
