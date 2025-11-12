@@ -1,6 +1,7 @@
 # Write a program to reverse a string using a for loop (don’t use slicing).
 
-``` word = "TCS"
+```
+word = "TCS"
 rev = ""
 for w in str(word):
     rev = w + rev
