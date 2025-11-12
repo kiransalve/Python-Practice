@@ -1,0 +1,33 @@
+# Print a Right-Angled Triangle Pattern
+```
+n = 4
+for i in range(0, n+1):
+    print('*' * i)
+```
+Explaination :
+
+| i | print("*" * i) | Output Line |
+| - | -------------- | ----------- |
+| 1 | `*`            | `*`         |
+| 2 | `**`           | `**`        |
+| 3 | `***`          | `***`       |
+| 4 | `****`         | `****`      |
+| 5 | `*****`        | `*****`     |
+
+
+1. What do we want?
+
+We want a triangle made of stars (*), where:
+
+The first row has 1 star.
+
+The second row has 2 stars.
+
+The third row has 3 stars.
+
+…and so on.
+
+So our goal is:
+
+Each next line has one more star than the previous one.
+
