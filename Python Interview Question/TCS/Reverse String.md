@@ -1,10 +1,11 @@
 # Write a program to reverse a string using a for loop (don’t use slicing).
-word = "TCS"
+
+`` word = "TCS"
 rev = ""
 for w in str(word):
     rev = w + rev
 rev
-
+``
 Explanation :
 
 | Step | char  | reversed_string (before) | Operation (`char + reversed_string`) | reversed_string (after) |
