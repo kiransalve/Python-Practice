@@ -89,3 +89,56 @@ Because dictionary keys must be immutable
 
 In short, Lists are mutable, flexible, and used when data changes, while Tuples are immutable, faster, and used when data should remain constant or needs to be used as dictionary keys.
 
+# 2. What is decorators?
+
+Decorators are function that takea another function as an argument, add some kinf of functionality to that and return another function without changing its actual code.
+
+Decorators are widely used for logging, authentication, timing, caching, validation, etc.
+
+Why Decorators Are Possible in Python
+
+Python treats functions as first-class objects, meaning:
+
+Functions can be passed as arguments
+
+Functions can return other functions
+
+Functions can be assigned to variables
+
+This allows decorators to work.
+
+def greet():
+    print("Hello")
+    
+def my_decorator(func):
+    def wrapper():
+        print("Before function runs")
+        func()
+        print("After function runs")
+    return wrapper
+
+
+Here:
+
+func → original function
+
+wrapper → adds extra behavior
+
+
+@my_decorator
+def greet():
+    print("Hello")
+
+greet = my_decorator(greet)
+
+Before function runs
+Hello
+After function runs
+
+
+
+
+
+
+
+
