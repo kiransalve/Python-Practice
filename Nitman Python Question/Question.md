@@ -135,7 +135,18 @@ Before function runs
 Hello
 After function runs
 
+# 3. Difference Between List Comprehension and Dictionary Comprehension?
 
+Both List Comprehension and Dictionary Comprehension are concise ways to create collections in Python using a single line of code instead of writing traditional loops
+
+The main difference is the type of data structure they create.
+
+| Feature        | List Comprehension                  | Dictionary Comprehension           |
+| -------------- | ----------------------------------- | ---------------------------------- |
+| Output         | Creates a **List**                  | Creates a **Dictionary**           |
+| Syntax         | `[expression for item in iterable]` | `{key:value for item in iterable}` |
+| Data Structure | Ordered collection of values        | Key–value pairs                    |
+| Use Case       | Transforming or filtering lists     | Creating mappings or lookup tables |
 
 
 
