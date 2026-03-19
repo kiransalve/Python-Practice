@@ -343,6 +343,7 @@ for num in nums:
 
 print(second)
 ```
+
 #. 9. Count frequency of elements?
 
 ```
@@ -358,3 +359,14 @@ for num in nums:
 
 print(freq)
 ```
+
+# 10. Remove duplicates from list?
+
+nums = [1, 2, 2, 3, 4, 4]
+
+unique = []
+for num in nums:
+    if num not in unique:
+        unique.append(num)
+
+print(unique)
