@@ -327,3 +327,19 @@ NumPy operations are implemented in C language
 
 Python lists run in slower Python loops
 
+# 8. Find second largest number in list?
+
+```
+nums = [10, 20, 4, 45, 99]
+
+first = second = float('-inf')
+
+for num in nums:
+    if num > first:
+        second = first
+        first = num
+    elif num > second and num != first:
+        second = num
+
+print(second)
+```
