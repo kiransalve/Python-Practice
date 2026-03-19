@@ -39,3 +39,11 @@ The model would be hosted on Azure cloud, where real-time data is passed to gene
 Results can be shown using dashboards like Power BI.”
 
 
+What if model accuracy drops?
+
+Answer:
+“If accuracy drops, I would first check for data drift or changes in patterns. 
+Then I would retrain the model with latest data, tune hyperparameters, and update features. 
+I can also monitor model performance regularly and set alerts.”
+
+
