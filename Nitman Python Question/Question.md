@@ -375,7 +375,7 @@ for num in nums:
 print(unique)
 ```
 
-**SQL**
+# # SQL
 
 # 1. Difference between WHERE and HAVING?
 
@@ -461,9 +461,18 @@ SELECT hq, COUNT(*)
 FROM cbl
 GROUP BY hq
 HAVING COUNT(*) > 1;
+```
 
+# 6. Find top 3 customers by sales
 
 ```
+SELECT customer_id, SUM(sales) AS total_sales
+FROM orders
+GROUP BY customer_id
+ORDER BY total_sales DESC
+LIMIT 3;
+```
+
 
 
 
