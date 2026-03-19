@@ -282,3 +282,48 @@ df['col'].interpolate()
 
 
 ```
+
+# 6 What is NumPy?
+
+NumPy (Numerical Python) is a Python library used for:
+
+numerical computations
+
+working with arrays and matrices
+
+performing fast mathematical operations
+
+It provides a powerful object called ndarray (n-dimensional array)
+
+
+# 7. Why is NumPy faster than Python lists?
+
+1. Homogeneous data
+
+NumPy arrays store same data type
+
+Python lists can store mixed types
+
+This makes NumPy more memory-efficient
+
+2. Contiguous memory
+
+NumPy stores data in continuous memory blocks
+
+Lists store references (pointers)
+
+Faster access and computation
+
+3. Vectorization
+   
+NumPy performs operations on entire array at once
+
+No need for loops
+
+
+4. Written in C
+
+NumPy operations are implemented in C language
+
+Python lists run in slower Python loops
+
