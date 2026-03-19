@@ -410,3 +410,26 @@ HAVING SUM(amount) > 500;
 
 WHERE is used to filter rows before grouping, while HAVING is used to filter aggregated results after GROUP BY. WHERE cannot use aggregate functions, but HAVING can.
 
+# 2. Types of Joines?
+
+Outer Join - Left/Right/Full outer join - to get columns value from another table based on common column
+
+self Join - to get column of same table
+
+Cross Join - all posible combination
+
+
+# 3. What is a Window Function?
+
+A window function performs a calculation across a set of rows (window) related to the current row, without grouping the rows into one result.
+
+```
+SELECT 
+    employee,
+    department,
+    salary,
+    SUM(salary) OVER (PARTITION BY department) AS dept_total
+FROM employees;
+```
+
+
