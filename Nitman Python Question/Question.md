@@ -362,6 +362,7 @@ print(freq)
 
 # 10. Remove duplicates from list?
 
+```
 nums = [1, 2, 2, 3, 4, 4]
 
 unique = []
@@ -370,3 +371,4 @@ for num in nums:
         unique.append(num)
 
 print(unique)
+```
