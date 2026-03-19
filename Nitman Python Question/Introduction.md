@@ -23,4 +23,4 @@ I have experience in machine learning techniques such as regression, classificat
 
 I spent my most time on data cleaning, feature engineering, building ML Models and optimizing its performance.
 
-I also have contributed projects like competitor analysis and customer feedback analysis for marketing team.
+I also have contributed projects like product basket analysis, markeing campaign effectiveness analysis and customer feedback analysis for marketing team.
