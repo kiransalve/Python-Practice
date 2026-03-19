@@ -24,6 +24,8 @@ then I analyse the trend, seasonality, stationarity.
 
 I have done feature engineering like lag feature, rolling average, date features like day, month, weekday-weekend, holiday flags
 
+Some other features like lag_1, lag_3, lag_6, rolling average of last 3 month, 6 months, converted product name into numeric using one hot encoding
+
 after cleaning data I have train data on ML models like Linear Regression , XG Boost, ARIMA etc. 
 before training I have splited data till last 3 months so I can test the data on this 3 month 
 
