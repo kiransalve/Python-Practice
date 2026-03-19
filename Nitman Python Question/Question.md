@@ -137,19 +137,148 @@ After function runs
 
 # 3. Difference Between List Comprehension and Dictionary Comprehension?
 
-Both List Comprehension and Dictionary Comprehension are concise ways to create collections in Python using a single line of code instead of writing traditional loops
+st Comprehension
 
-The main difference is the type of data structure they create.
+Used to create a list
 
-| Feature        | List Comprehension                  | Dictionary Comprehension           |
-| -------------- | ----------------------------------- | ---------------------------------- |
-| Output         | Creates a **List**                  | Creates a **Dictionary**           |
-| Syntax         | `[expression for item in iterable]` | `{key:value for item in iterable}` |
-| Data Structure | Ordered collection of values        | Key–value pairs                    |
-| Use Case       | Transforming or filtering lists     | Creating mappings or lookup tables |
+Syntax: [expression for item in iterable if condition]
+
+```
+Example:
+
+nums = [1, 2, 3, 4]
+squares = [x**2 for x in nums]
+
+# Output: [1, 4, 9, 16]
+
+Returns a list
+```
+
+Dictionary Comprehension
+
+Used to create a dictionary (key-value pairs)
+
+Syntax: {key: value for item in iterable if condition}
+
+```
+Example:
+
+nums = [1, 2, 3, 4]
+square_dict = {x: x**2 for x in nums}
+
+# Output: {1: 1, 2: 4, 3: 9, 4: 16}
+
+Returns a dictionary
+```
+
+# 4. What is a Lambda Function?
+
+A lambda function is a small anonymous function (function without a name) in Python.
+
+It is used for short, one-line operations
+
+Syntax : lambda arguments: expression
+
+```
+add = lambda a, b: a + b
+print(add(2, 3))
+
+# Output: 5
+
+```
+# 5. Difference between deep copy and shallow copy?
+
+Shallow Copy
+
+Creates a new object, but references same inner objects
+
+Changes in nested objects will affect original
+
+```
+import copy
+
+a = [[1, 2], [3, 4]]
+b = copy.copy(a)
+
+b[0][0] = 100
+print(a)  # [[100, 2], [3, 4]]
+```
+
+Deep Copy
+
+Creates a completely independent copy
+
+Copies all nested object
+
+```
+import copy
+
+a = [[1, 2], [3, 4]]
+b = copy.deepcopy(a)
+
+b[0][0] = 100
+print(a)
+
+# [[1, 2], [3, 4]]
+```
+
+# 5. Explain Pandas groupby with example?
+
+Groupby is used to group data based on a column and then perform operations like sum, mean, count, etc.
+
+```
+import pandas as pd
+
+data = {
+    'Product': ['A', 'A', 'B', 'B', 'C'],
+    'Sales': [100, 150, 200, 250, 300]
+}
+
+df = pd.DataFrame(data)
+
+df.groupby('Product')['Sales'].sum()
+
+# multiple operation
+df.groupby('Product')['Sales'].agg(['sum', 'mean', 'count'])
+
+```
+
+# 6. How do you handle missing values in Pandas?
+
+```
+1. Detect missing values
+
+df.isnull()        # shows True/False
+df.isnull().sum()  # count of missing values
+
+2. Drop missing values
+
+Remove rows: df.dropna()
+
+Remove columns: df.dropna(axis=1)
+
+3. Fill missing values
+
+Numerical data
+Mean / Median:
+
+df['col'].fillna(df['col'].mean(), inplace=True)
+
+Categorical data
+Mode / constant:
+
+df['col'].fillna('Unknown', inplace=True)
+
+
+4. Forward & Backward fill (very important for time-series)
+
+df.fillna(method='ffill')  # forward fill
+df.fillna(method='bfill')  # backward fill
+
+5. Interpolation (for smooth data)
+
+df['col'].interpolate()
 
 
 
-
-
-
+```
