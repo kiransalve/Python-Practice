@@ -31,4 +31,8 @@ After training I evaluate the model using MAE, RMSE, MAPE.
 
 I compare the XGBOOST and ARIMA, for some product XGBoost perform very well so I have use hybrid aproach by combining both 
 
+ARIMA perform good to capture time based patterns like seasonality and trend
+
+and XG Boost capture comlex and non-linear relationship in the data 
 I use flask to deploy model on our AZURE cloud.
+
