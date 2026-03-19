@@ -1,3 +1,5 @@
+** Python**
+
 # 1. What is difference between list and tuple?
 
 In Python, both List and Tuple are used to store multiple items in a single variable.
@@ -372,3 +374,39 @@ for num in nums:
 
 print(unique)
 ```
+
+**SQL**
+
+# 1. Difference between WHERE and HAVING?
+
+WHERE Clause
+
+Used to filter rows before grouping
+
+Works on individual rows
+
+Cannot use aggregate functions (like SUM, COUNT)
+
+```
+SELECT * 
+FROM sales
+WHERE amount > 100;
+```
+
+HAVING Clause
+
+Used to filter after GROUP BY
+
+Works on aggregated data
+
+Can use aggregate functions
+
+```
+SELECT product, SUM(amount)
+FROM sales
+GROUP BY product
+HAVING SUM(amount) > 500;
+```
+
+WHERE is used to filter rows before grouping, while HAVING is used to filter aggregated results after GROUP BY. WHERE cannot use aggregate functions, but HAVING can.
+
