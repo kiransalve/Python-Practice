@@ -432,4 +432,43 @@ SELECT
 FROM employees;
 ```
 
+# 4. Find 2nd highest salary
+
+```
+SELECT salary
+FROM (
+    SELECT salary, DENSE_RANK() OVER (ORDER BY salary DESC) AS rnk
+    FROM employees
+) t
+WHERE rnk = 2;
+```
+
+# 5. Get duplicate records?
+
+```
+Method 1 -
+
+SELECT *
+FROM (
+    SELECT *, COUNT(*) OVER (PARTITION BY email) AS cnt
+    FROM users
+) t
+WHERE cnt > 1;
+
+Method 2 -
+
+SELECT hq, COUNT(*)
+FROM cbl
+GROUP BY hq
+HAVING COUNT(*) > 1;
+
+
+```
+
+
+
+
+
+
+
 
