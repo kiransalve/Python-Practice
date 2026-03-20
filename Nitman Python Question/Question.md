@@ -1,4 +1,4 @@
-## Python
+# Python
 
 # 1. What is difference between list and tuple?
 
@@ -541,10 +541,31 @@ Ipmutation with mean/median
 Keep them if it valid like high sales
 
 
+# Types of ML
+
+Supervised Learning
+
+Model learns from labeled data (input + output)
+
+Used for prediction
+
+Model learns from past data with known answers
 
 
+Unsupervised Learning
+
+Model learns from unlabeled data
+
+Finds hidden patterns or groups
+
+No target variable, model finds structure in data.
 
 
+Reinforcement Learning
+
+Model learns by trial and error
+
+Gets rewards or penalties
 
 
 
