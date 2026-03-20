@@ -617,7 +617,36 @@ p = 1 / 1 + e ^ -x
 Converts any value into 0 to 1 probability
 
 
+# What is Random Forest?
 
+Random Forest is a machine learning algorithm that builds multiple decision trees and combines their results to make better predictions.
+
+Creates many decision trees using random samples of data
+
+Each tree gives a prediction
+
+Final output is:
+
+Classification → majority voting
+
+Regression → average of predictions
+
+
+# What is KNN?
+
+KNN is a supervised learning algorithm that predicts output based on the K nearest data points using distance metrics.
+
+Choose a value of K (number of neighbors)
+
+Calculate distance between new point and all data points using Euclidean distance (most common), Manhattan distance
+
+Pick K nearest points
+
+Predict:
+
+Classification → majority vote
+
+Regression → average value
 
 
 
