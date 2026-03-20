@@ -568,6 +568,43 @@ Model learns by trial and error
 Gets rewards or penalties
 
 
+# What is Linear Regression?
+
+Linear Regression is a supervised machine learning algorithm used to predict a value, Finds best line that minimizes error
+
+y = mx + b
+
+It is sensetive to outlier and multi collinearity
+
+It assume -
+
+1. Linearity
+
+Relationship between input (X) and output (Y) should be linear
+
+Straight-line relationship
+
+
+2. Independence of errors
+
+Errors (residuals) should be independent
+
+No relationship between observations
+
+3. Homoscedasticity
+
+Error variance should be constant
+
+4. Normality of errors
+
+Residuals should be normally distributed
+
+5. No multicollinearity
+
+Independent variables should not be highly correlated
+
+
+
 
 
 
