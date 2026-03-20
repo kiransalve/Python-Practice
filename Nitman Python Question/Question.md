@@ -649,6 +649,78 @@ Classification → majority vote
 Regression → average value
 
 
+# What is K-Means?
+
+K-Means is an unsupervised clustering algorithm that groups data into K clusters by assigning points to the nearest centroid and updating centroids iteratively.
+
+Choose number of clusters (K)
+
+Randomly initialize centroids
+
+Assign each point to nearest centroid
+
+Recalculate centroids
+
+Repeat until clusters stabilize
+
+
+# Evalutions Metrics
+
+Regression Metrics - 
+
+MAE (Mean Absolute Error) - sum of error/ n - Average of absolute errors
+
+“On average, how much prediction is wrong”
+
+RMSE (Root Mean Squared Error) - Squares errors → penalizes large mistakes 
+
+“Gives higher penalty to big errors”
+
+R² Score (Coefficient of Determination)
+
+Range: 0 to 1
+
+Closer to 1 = better model
+
+“How well model explains data variance”
+
+
+Classification Metrics (Yes/No)
+
+Accuracy - Correct Prediction / total 
+
+Precision - Out of predicted positives, how many are correct
+
+Recall - Out of actual positives, how many captured
+
+# A confusion matrix 
+
+It is a table used to evaluate classification models by showing actual vs predicted values, including true positives, true negatives, false positives, and false negatives.
+
+# Underfiting vs overfitting
+
+Overfitting happens when the model learns too much from training data, including noise.
+
+Underfitting happens when the model is too simple and cannot capture patterns.
+
+# Bias and Variance 
+
+Bias is the error due to too simple assumptions in the model.
+
+Variance is the error due to model being too sensitive to training data
+
+
+# Cross-validation 
+
+It is used to evaluate model performance by splitting data into multiple folds and training/testing the model multiple times. It provides a more reliable and stable estimate compared to a single train-test split
+
+
+
+
+
+
+
+
 
 
 
