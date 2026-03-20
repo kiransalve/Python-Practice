@@ -534,8 +534,11 @@ upper = Q3 + 1.5*IQR
 df['col'] = df['col'].clip(lower, upper)
 ```
 
+Transformation - like log transformation
 
+Ipmutation with mean/median
 
+Keep them if it valid like high sales
 
 
 
