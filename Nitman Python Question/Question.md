@@ -604,8 +604,16 @@ Residuals should be normally distributed
 Independent variables should not be highly correlated
 
 
+# What is Logistic regression ?
 
+It is a supervised learning algorithm used for classification problems.
+It predicts probability using a sigmoid function and classifies output into categories like 0 or 1
 
+Instead of a straight line, it uses an S-shaped curve (sigmoid function)
+​
+p = 1 / 1 + e ^ -x
+
+Converts any value into 0 to 1 probability
 
 
 
