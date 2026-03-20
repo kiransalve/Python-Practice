@@ -281,8 +281,6 @@ df.fillna(method='bfill')  # backward fill
 
 df['col'].interpolate()
 
-
-
 ```
 
 # 6 What is NumPy?
@@ -373,6 +371,29 @@ for num in nums:
         unique.append(num)
 
 print(unique)
+```
+
+# 11. loc vs iloc?
+
+loc (Label-based selection)
+
+Used to select data using row/column labels (names)
+
+Includes end index
+``
+df.loc[0:2, 'Name']
+Selects rows with labels 0 to 2 and column Name
+```
+
+iloc (Position-based selection)
+
+Used to select data using index positions (numbers)
+
+Excludes end index (like Python slicing)
+
+```
+df.iloc[0:2, 0]
+Selects rows 0 and 1 and first column
 ```
 
 # # SQL
