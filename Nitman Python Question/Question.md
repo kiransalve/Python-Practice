@@ -494,6 +494,57 @@ ORDER BY total_sales DESC
 LIMIT 3;
 ```
 
+# ML
+
+# 1. How to handle Outlier?
+
+I detect outliers using IQR or Z-score. Then I handle them by removing, capping, or transforming depending on the business context. If outliers are meaningful, I keep them 
+
+```
+Detect -
+
+IQR Method -The Interquartile Range
+
+Q1 = df['col'].quantile(0.25)
+Q3 = df['col'].quantile(0.75)
+IQR = Q3 - Q1
+
+outliers = df[(df['col'] < Q1 - 1.5*IQR) | (df['col'] > Q3 + 1.5*IQR)]
+
+Using Z-score -
+
+from scipy import stats
+
+z = stats.zscore(df['col'])
+outliers = df[(z > 3) | (z < -3)]
+
+Handle Outlier -
+
+Remove - 
+``
+df = df[(df['col'] >= Q1 - 1.5*IQR) & (df['col'] <= Q3 + 1.5*IQR)]
+```
+
+Capping (Winsorization)
+
+```
+lower = Q1 - 1.5*IQR
+upper = Q3 + 1.5*IQR
+
+df['col'] = df['col'].clip(lower, upper)
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
