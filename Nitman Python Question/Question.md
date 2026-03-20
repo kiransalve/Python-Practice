@@ -2,7 +2,8 @@
 
 # 1. What is difference between list and tuple?
 
-In Python, both List and Tuple are used to store multiple items in a single variable.
+In Python, both List and Tuple are
+used to store multiple items in a single variable.
 The main difference between them is mutability.
 
 Mutability
@@ -521,7 +522,7 @@ outliers = df[(z > 3) | (z < -3)]
 Handle Outlier -
 
 Remove - 
-``
+```
 df = df[(df['col'] >= Q1 - 1.5*IQR) & (df['col'] <= Q3 + 1.5*IQR)]
 ```
 
