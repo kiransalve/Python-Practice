@@ -89,3 +89,99 @@ Output:
 ABC
 
 ```
+
+# What is ‘init’ Keyword In Python?
+
+__init__ is a special constructor method in Python classes that is automatically called when an object is created. It is used to initialize object attributes (variables).
+
+# Difference Between Modules and Packages in Python
+
+Module
+
+A module is a single Python file (.py) containing functions, classes, or variables.
+
+Package
+
+A package is a collection (folder) of multiple modules.
+
+Used to organize large projects into directories.
+
+Contains an __init__.py file (traditionally).
+
+
+# range() vs xrange()
+
+range()
+
+Returns a list of numbers (in Python 2).
+
+Consumes more memory because all values are stored.
+
+xrange()
+
+Returns an iterator (generator-like object).
+
+Generates numbers one at a time (lazy evaluation).
+
+More memory efficient.
+
+Used for large loops (Python 2).
+
+In Python 3, xrange() was removed. range() now behaves like xrange()
+
+# What are Generators in Python?
+
+Generators are special functions in Python that return values one at a time using the yield keyword instead of returning all values at once.
+
+# What are in-built Data Types in Python OR Explain Mutable and Immutable Data Types
+
+
+1️⃣ Numeric Types
+
+int → integers (10)
+float → decimal numbers (10.5)
+complex → complex numbers (2+3j)
+
+2️⃣ Sequence Types
+
+list
+tuple
+range
+
+3️⃣ Text Type
+
+str (string)
+
+4️⃣ Mapping Type
+
+dict (dictionary)
+
+5️⃣ Set Types
+
+set
+frozenset
+
+6️⃣ Boolean Type
+
+bool (True, False)
+
+7️⃣ Binary Types
+
+bytes, bytearray, memoryview
+
+## Mutable Data Types
+
+Objects whose values can be changed after creation.
+
+Examples:
+
+list
+dict
+set
+bytearray
+
+
+
+
+
+
