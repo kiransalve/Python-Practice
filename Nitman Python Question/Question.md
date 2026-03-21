@@ -135,52 +135,15 @@ Generators are special functions in Python that return values one at a time usin
 
 # What are in-built Data Types in Python OR Explain Mutable and Immutable Data Types
 
-
-1️⃣ Numeric Types
-
-int → integers (10)
-float → decimal numbers (10.5)
-complex → complex numbers (2+3j)
-
-2️⃣ Sequence Types
-
-list
-tuple
-range
-
-3️⃣ Text Type
-
-str (string)
-
-4️⃣ Mapping Type
-
-dict (dictionary)
-
-5️⃣ Set Types
-
-set
-frozenset
-
-6️⃣ Boolean Type
-
-bool (True, False)
-
-7️⃣ Binary Types
-
-bytes, bytearray, memoryview
-
-## Mutable Data Types
-
-Objects whose values can be changed after creation.
-
-Examples:
-
-list
-dict
-set
-bytearray
-
-
+Boolean (bool) - Immutable
+Integer (int) - Immutable
+Float - Immutable
+String (str) - Immutable
+tuple - Immutable
+frozenset - Immutable
+list - Mutable
+set - Mutable
+dict - Mutable
 
 
 
