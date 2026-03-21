@@ -38,7 +38,6 @@ Python manages memory automatically using private heap space, reference counting
 
 Both generators and iterators are used to iterate over a sequence of values one at a time
 
-```
 Generators
 
 Generators are iterators which can execute only once.
@@ -49,6 +48,7 @@ Generators are mostly used in loops to generate an iterator by returning all the
 
 Every generator is an iterator.
 
+```
 EXAMPLE:
 
 def sqr(n):
@@ -66,8 +66,6 @@ Output:
 
 ```
 
-```
-
 Iterator
 
 An iterator is an object which contains a countable number of values and it is used to iterate over iterable objects like list, tuples, sets, etc.
@@ -80,6 +78,7 @@ Every iterator is not a generator.
 
 Example:
 
+```
 iter_list = iter(['A', 'B', 'C'])
 
 print(next(iter_list))
