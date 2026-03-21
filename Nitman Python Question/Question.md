@@ -135,6 +135,7 @@ Generators are special functions in Python that return values one at a time usin
 
 # What are in-built Data Types in Python OR Explain Mutable and Immutable Data Types
 
+```
 Boolean (bool) - Immutable
 Integer (int) - Immutable
 Float - Immutable
@@ -144,7 +145,7 @@ frozenset - Immutable
 list - Mutable
 set - Mutable
 dict - Mutable
-
+```
 
 
 
