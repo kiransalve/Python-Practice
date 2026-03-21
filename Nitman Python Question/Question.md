@@ -1,726 +1,92 @@
-# Python
+# List vs Tuple
 
-# 1. What is difference between list and tuple?
+In Python, both List and Tuple are ordered collections used to store multiple items, but the main difference is mutability.
 
-In Python, both List and Tuple are
-used to store multiple items in a single variable.
-The main difference between them is mutability.
+List is mutable, meaning elements can be modified after creation.
 
-Mutability
+Tuple is immutable, meaning elements cannot be changed once created
 
-List → Mutable (we can change, add, or remove elements after creation)
+List consume more memory that tuple
 
-Tuple → Immutable (cannot be modified after creation)
+List is slower than tuple
 
-List example -
-my_list = [10, 20, 30]
-my_list[1] = 50
-print(my_list)
+List creation - [] and tubele creation - ()
 
-[10, 50, 30]
+# What is Decorator?
 
-Here we changed the value, so list is mutable
+A Decorator is just a function that takes another function as an argument, add some kind of
+functionality and then returns another function without changing its actual code.
 
-Tuple example -
-my_tuple = (10, 20, 30)
-my_tuple[1] = 50
+We use it for logging, authentication, timing execution, validation etc.
 
+# Difference between List and Dictionary 
 
-TypeError: 'tuple' object does not support item assignment
+List stores items using index positions.
 
+Dictionary stores data using key–value pairs.
 
-Syntax
+List is created by [] and dictionary is created by {}
 
-List uses square brackets []
+List can allow duplicate value, In dictionary key must be unique
 
-Tuple uses parentheses ()
+# How Memory Managed In Python?
 
-Performance
+Python manages memory automatically using private heap space, reference counting, and garbage collection to free unused objects
 
-Tuple is faster than List
 
-Because tuples are immutable, Python can optimize them better.
+# Difference Between Generators and Iterators
 
-import timeit
-
-timeit.timeit("[1,2,3,4,5]", number=1000000)
-timeit.timeit("(1,2,3,4,5)", number=1000000)
-
-Tuple creation is slightly faster.
-
-Memory Usage
-
-Tuples use less memory compared to lists because they are immutable.
-
-Use Cases
-
-Use List when:
-
-Data needs to change
-
-Adding/removing items
-
-Dynamic collections
-
-shopping_cart = ["milk", "bread", "butter"]
-shopping_cart.append("eggs")
-
-Use Tuple when:
-
-Data should remain constant
-
-Protect data from modification
-
-Used as dictionary keys
-
-location = (19.0760, 72.8777)   # latitude, longitude
-
-Coordinates should not change, so tuple is ideal.
-
-
-Hashability
-
-Tuple can be used as dictionary keys, but lists cannot.
-
-Tuple as key
-data = {(1,2): "Point A"}
-
-List cannot be key
-data = {[1,2]: "Point A"}   # Error
-
-Because dictionary keys must be immutable
-
-In short, Lists are mutable, flexible, and used when data changes, while Tuples are immutable, faster, and used when data should remain constant or needs to be used as dictionary keys.
-
-# 2. What is decorators?
-
-Decorators are function that takea another function as an argument, add some kinf of functionality to that and return another function without changing its actual code.
-
-Decorators are widely used for logging, authentication, timing, caching, validation, etc.
-
-Why Decorators Are Possible in Python
-
-Python treats functions as first-class objects, meaning:
-
-Functions can be passed as arguments
-
-Functions can return other functions
-
-Functions can be assigned to variables
-
-This allows decorators to work.
-
-def greet():
-    print("Hello")
-    
-def my_decorator(func):
-    def wrapper():
-        print("Before function runs")
-        func()
-        print("After function runs")
-    return wrapper
-
-
-Here:
-
-func → original function
-
-wrapper → adds extra behavior
-
-
-@my_decorator
-def greet():
-    print("Hello")
-
-greet = my_decorator(greet)
-
-Before function runs
-Hello
-After function runs
-
-# 3. Difference Between List Comprehension and Dictionary Comprehension?
-
-st Comprehension
-
-Used to create a list
-
-Syntax: [expression for item in iterable if condition]
+Both generators and iterators are used to iterate over a sequence of values one at a time
 
 ```
+Generators
+
+Generators are iterators which can execute only once.
+
+Generator uses “yield” keyword.
+
+Generators are mostly used in loops to generate an iterator by returning all the values in the loop without affecting the iteration of the loop.
+
+Every generator is an iterator.
+
+EXAMPLE:
+
+def sqr(n):
+    for i in range(1, n+1):
+    yield i*i
+a = sqr(3)
+
+print(next(a))
+print(next(a))
+print(next(a))
+
+Output:
+1
+49
+
+```
+
+```
+
+Iterator
+
+An iterator is an object which contains a countable number of values and it is used to iterate over iterable objects like list, tuples, sets, etc.
+
+Iterators are used mostly to iterate or convert other objects to an iterator using iter() function.
+
+Iterator uses iter() and next() functions.
+
+Every iterator is not a generator.
+
 Example:
 
-nums = [1, 2, 3, 4]
-squares = [x**2 for x in nums]
+iter_list = iter(['A', 'B', 'C'])
 
-# Output: [1, 4, 9, 16]
+print(next(iter_list))
+print(next(iter_list))
+print(next(iter_list))
 
-Returns a list
-```
-
-Dictionary Comprehension
-
-Used to create a dictionary (key-value pairs)
-
-Syntax: {key: value for item in iterable if condition}
+Output:
+ABC
 
 ```
-Example:
-
-nums = [1, 2, 3, 4]
-square_dict = {x: x**2 for x in nums}
-
-# Output: {1: 1, 2: 4, 3: 9, 4: 16}
-
-Returns a dictionary
-```
-
-# 4. What is a Lambda Function?
-
-A lambda function is a small anonymous function (function without a name) in Python.
-
-It is used for short, one-line operations
-
-Syntax : lambda arguments: expression
-
-```
-add = lambda a, b: a + b
-print(add(2, 3))
-
-# Output: 5
-
-```
-# 5. Difference between deep copy and shallow copy?
-
-Shallow Copy
-
-Creates a new object, but references same inner objects
-
-Changes in nested objects will affect original
-
-```
-import copy
-
-a = [[1, 2], [3, 4]]
-b = copy.copy(a)
-
-b[0][0] = 100
-print(a)  # [[100, 2], [3, 4]]
-```
-
-Deep Copy
-
-Creates a completely independent copy
-
-Copies all nested object
-
-```
-import copy
-
-a = [[1, 2], [3, 4]]
-b = copy.deepcopy(a)
-
-b[0][0] = 100
-print(a)
-
-# [[1, 2], [3, 4]]
-```
-
-# 5. Explain Pandas groupby with example?
-
-Groupby is used to group data based on a column and then perform operations like sum, mean, count, etc.
-
-```
-import pandas as pd
-
-data = {
-    'Product': ['A', 'A', 'B', 'B', 'C'],
-    'Sales': [100, 150, 200, 250, 300]
-}
-
-df = pd.DataFrame(data)
-
-df.groupby('Product')['Sales'].sum()
-
-# multiple operation
-df.groupby('Product')['Sales'].agg(['sum', 'mean', 'count'])
-
-```
-
-# 6. How do you handle missing values in Pandas?
-
-```
-1. Detect missing values
-
-df.isnull()        # shows True/False
-df.isnull().sum()  # count of missing values
-
-2. Drop missing values
-
-Remove rows: df.dropna()
-
-Remove columns: df.dropna(axis=1)
-
-3. Fill missing values
-
-Numerical data
-Mean / Median:
-
-df['col'].fillna(df['col'].mean(), inplace=True)
-
-Categorical data
-Mode / constant:
-
-df['col'].fillna('Unknown', inplace=True)
-
-
-4. Forward & Backward fill (very important for time-series)
-
-df.fillna(method='ffill')  # forward fill
-df.fillna(method='bfill')  # backward fill
-
-5. Interpolation (for smooth data)
-
-df['col'].interpolate()
-
-```
-
-# 6 What is NumPy?
-
-NumPy (Numerical Python) is a Python library used for:
-
-numerical computations
-
-working with arrays and matrices
-
-performing fast mathematical operations
-
-It provides a powerful object called ndarray (n-dimensional array)
-
-
-# 7. Why is NumPy faster than Python lists?
-
-1. Homogeneous data
-
-NumPy arrays store same data type
-
-Python lists can store mixed types
-
-This makes NumPy more memory-efficient
-
-2. Contiguous memory
-
-NumPy stores data in continuous memory blocks
-
-Lists store references (pointers)
-
-Faster access and computation
-
-3. Vectorization
-   
-NumPy performs operations on entire array at once
-
-No need for loops
-
-
-4. Written in C
-
-NumPy operations are implemented in C language
-
-Python lists run in slower Python loops
-
-# 8. Find second largest number in list?
-
-```
-nums = [10, 20, 4, 45, 99]
-
-first = second = float('-inf')
-
-for num in nums:
-    if num > first:
-        second = first
-        first = num
-    elif num > second and num != first:
-        second = num
-
-print(second)
-```
-
-#. 9. Count frequency of elements?
-
-```
-nums = [1, 2, 2, 3, 1, 4, 2]
-
-freq = {}
-
-for num in nums:
-    if num in freq:
-        freq[num] += 1
-    else:
-        freq[num] = 1
-
-print(freq)
-```
-
-# 10. Remove duplicates from list?
-
-```
-nums = [1, 2, 2, 3, 4, 4]
-
-unique = []
-for num in nums:
-    if num not in unique:
-        unique.append(num)
-
-print(unique)
-```
-
-# 11. loc vs iloc?
-
-loc (Label-based selection)
-
-Used to select data using row/column labels (names)
-
-Includes end index
-``
-df.loc[0:2, 'Name']
-Selects rows with labels 0 to 2 and column Name
-```
-
-iloc (Position-based selection)
-
-Used to select data using index positions (numbers)
-
-Excludes end index (like Python slicing)
-
-```
-df.iloc[0:2, 0]
-Selects rows 0 and 1 and first column
-```
-
-# # SQL
-
-# 1. Difference between WHERE and HAVING?
-
-WHERE Clause
-
-Used to filter rows before grouping
-
-Works on individual rows
-
-Cannot use aggregate functions (like SUM, COUNT)
-
-```
-SELECT * 
-FROM sales
-WHERE amount > 100;
-```
-
-HAVING Clause
-
-Used to filter after GROUP BY
-
-Works on aggregated data
-
-Can use aggregate functions
-
-```
-SELECT product, SUM(amount)
-FROM sales
-GROUP BY product
-HAVING SUM(amount) > 500;
-```
-
-WHERE is used to filter rows before grouping, while HAVING is used to filter aggregated results after GROUP BY. WHERE cannot use aggregate functions, but HAVING can.
-
-# 2. Types of Joines?
-
-Outer Join - Left/Right/Full outer join - to get columns value from another table based on common column
-
-self Join - to get column of same table
-
-Cross Join - all posible combination
-
-
-# 3. What is a Window Function?
-
-A window function performs a calculation across a set of rows (window) related to the current row, without grouping the rows into one result.
-
-```
-SELECT 
-    employee,
-    department,
-    salary,
-    SUM(salary) OVER (PARTITION BY department) AS dept_total
-FROM employees;
-```
-
-# 4. Find 2nd highest salary
-
-```
-SELECT salary
-FROM (
-    SELECT salary, DENSE_RANK() OVER (ORDER BY salary DESC) AS rnk
-    FROM employees
-) t
-WHERE rnk = 2;
-```
-
-# 5. Get duplicate records?
-
-```
-Method 1 -
-
-SELECT *
-FROM (
-    SELECT *, COUNT(*) OVER (PARTITION BY email) AS cnt
-    FROM users
-) t
-WHERE cnt > 1;
-
-Method 2 -
-
-SELECT hq, COUNT(*)
-FROM cbl
-GROUP BY hq
-HAVING COUNT(*) > 1;
-```
-
-# 6. Find top 3 customers by sales
-
-```
-SELECT customer_id, SUM(sales) AS total_sales
-FROM orders
-GROUP BY customer_id
-ORDER BY total_sales DESC
-LIMIT 3;
-```
-
-# ML
-
-# 1. How to handle Outlier?
-
-I detect outliers using IQR or Z-score. Then I handle them by removing, capping, or transforming depending on the business context. If outliers are meaningful, I keep them 
-
-```
-Detect -
-
-IQR Method -The Interquartile Range
-
-Q1 = df['col'].quantile(0.25)
-Q3 = df['col'].quantile(0.75)
-IQR = Q3 - Q1
-
-outliers = df[(df['col'] < Q1 - 1.5*IQR) | (df['col'] > Q3 + 1.5*IQR)]
-
-Using Z-score -
-
-from scipy import stats
-
-z = stats.zscore(df['col'])
-outliers = df[(z > 3) | (z < -3)]
-
-Handle Outlier -
-
-Remove - 
-```
-df = df[(df['col'] >= Q1 - 1.5*IQR) & (df['col'] <= Q3 + 1.5*IQR)]
-```
-
-Capping (Winsorization)
-
-```
-lower = Q1 - 1.5*IQR
-upper = Q3 + 1.5*IQR
-
-df['col'] = df['col'].clip(lower, upper)
-```
-
-Transformation - like log transformation
-
-Ipmutation with mean/median
-
-Keep them if it valid like high sales
-
-
-# Types of ML
-
-Supervised Learning
-
-Model learns from labeled data (input + output)
-
-Used for prediction
-
-Model learns from past data with known answers
-
-
-Unsupervised Learning
-
-Model learns from unlabeled data
-
-Finds hidden patterns or groups
-
-No target variable, model finds structure in data.
-
-
-Reinforcement Learning
-
-Model learns by trial and error
-
-Gets rewards or penalties
-
-
-# What is Linear Regression?
-
-Linear Regression is a supervised machine learning algorithm used to predict a value, Finds best line that minimizes error
-
-y = mx + b
-
-It is sensetive to outlier and multi collinearity
-
-It assume -
-
-1. Linearity
-
-Relationship between input (X) and output (Y) should be linear
-
-Straight-line relationship
-
-
-2. Independence of errors
-
-Errors (residuals) should be independent
-
-No relationship between observations
-
-3. Homoscedasticity
-
-Error variance should be constant
-
-4. Normality of errors
-
-Residuals should be normally distributed
-
-5. No multicollinearity
-
-Independent variables should not be highly correlated
-
-
-# What is Logistic regression ?
-
-It is a supervised learning algorithm used for classification problems.
-It predicts probability using a sigmoid function and classifies output into categories like 0 or 1
-
-Instead of a straight line, it uses an S-shaped curve (sigmoid function)
-​
-p = 1 / 1 + e ^ -x
-
-Converts any value into 0 to 1 probability
-
-
-# What is Random Forest?
-
-Random Forest is a machine learning algorithm that builds multiple decision trees and combines their results to make better predictions.
-
-Creates many decision trees using random samples of data
-
-Each tree gives a prediction
-
-Final output is:
-
-Classification → majority voting
-
-Regression → average of predictions
-
-
-# What is KNN?
-
-KNN is a supervised learning algorithm that predicts output based on the K nearest data points using distance metrics.
-
-Choose a value of K (number of neighbors)
-
-Calculate distance between new point and all data points using Euclidean distance (most common), Manhattan distance
-
-Pick K nearest points
-
-Predict:
-
-Classification → majority vote
-
-Regression → average value
-
-
-# What is K-Means?
-
-K-Means is an unsupervised clustering algorithm that groups data into K clusters by assigning points to the nearest centroid and updating centroids iteratively.
-
-Choose number of clusters (K)
-
-Randomly initialize centroids
-
-Assign each point to nearest centroid
-
-Recalculate centroids
-
-Repeat until clusters stabilize
-
-
-# Evalutions Metrics
-
-Regression Metrics - 
-
-MAE (Mean Absolute Error) - sum of error/ n - Average of absolute errors
-
-“On average, how much prediction is wrong”
-
-RMSE (Root Mean Squared Error) - Squares errors → penalizes large mistakes 
-
-“Gives higher penalty to big errors”
-
-R² Score (Coefficient of Determination)
-
-Range: 0 to 1
-
-Closer to 1 = better model
-
-“How well model explains data variance”
-
-
-Classification Metrics (Yes/No)
-
-Accuracy - Correct Prediction / total 
-
-Precision - Out of predicted positives, how many are correct
-
-Recall - Out of actual positives, how many captured
-
-# A confusion matrix 
-
-It is a table used to evaluate classification models by showing actual vs predicted values, including true positives, true negatives, false positives, and false negatives.
-
-# Underfiting vs overfitting
-
-Overfitting happens when the model learns too much from training data, including noise.
-
-Underfitting happens when the model is too simple and cannot capture patterns.
-
-# Bias and Variance 
-
-Bias is the error due to too simple assumptions in the model.
-
-Variance is the error due to model being too sensitive to training data
-
-
-# Cross-validation 
-
-It is used to evaluate model performance by splitting data into multiple folds and training/testing the model multiple times. It provides a more reliable and stable estimate compared to a single train-test split
-
-
-
-
-
-
-
-
-
-
-
