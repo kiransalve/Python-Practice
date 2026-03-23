@@ -147,5 +147,29 @@ set - Mutable
 dict - Mutable
 ```
 
+# Explain Ternary Operator in Python?
 
+The Ternary Operator in Python is a one-line shortcut for an if-else statement
+
+```
+
+value_if_true if condition else value_if_false
+
+age = 20
+
+if age >= 18:
+    status = "Adult"
+else:
+    status = "Minor"
+
+
+age = 20
+status = "Adult" if age >= 18 else "Minor"
+
+Multiple Conditions (Nested Ternary)
+
+marks = 75
+
+grade = "A" if marks >= 90 else "B" if marks >= 60 else "C"
+```
 
